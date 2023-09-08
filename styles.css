@@ -11,6 +11,6 @@ body{
 }
 .profile-image{
     width: 100px;
-    height: 150px;
+    height: auto;
     border-radius: 100%;
 }
