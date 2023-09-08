@@ -10,7 +10,7 @@ body{
     margin: 20px;
 }
 .profile-image{
-    width: 100px;
-    height: auto;
-    border-radius: 100%;
+    max-width: 250px;
+    border-radius: 10%;
+    margin: 20px auto;
 }
