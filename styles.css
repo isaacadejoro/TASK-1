@@ -1,0 +1,16 @@
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+
+}
+
+.data-container{
+    padding: 20px;
+    border: 1px solid #0f4;
+    margin: 20px;
+}
+.profile-image{
+    width: 100px;
+    height: 150px;
+    border-radius: 100%;
+}

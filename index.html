@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset = "UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href = "styles.css">
+        <title> Personal Data webpage</title>        
+    </head>
+    <body>
+        <h1 data-testid="Page Title">Personal Data</h1>
+        <div class="data-container">
+            <img class="profile-image"src="profile.JPG" alt="isaacadejoro" data-testid="slackDisplayImage">
+            <p data-testid="slackUserName">Slack Username: @isaacadejoro</p>
+            <p data-testid="currentDayOfTheWeek">Current Day of The Week: <span id= "dayOfWeek"></span></p>
+            <p data-testid="currentUTCTime">Current UTC Time: <span id= "utcTime"></span></p>
+            <p data-testid="myTrack">Track: <span id= "track">FrontEnd</span></p>
+            <p data-testid="githubURL">GitHub URL: <a href="" target="_blank">My GitHub Repo</a></p>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
