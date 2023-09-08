@@ -1,28 +1,15 @@
-document.addEventListener("DOMContentLoaded", function () {
+// JavaScript code to update real-time elements
+const updateRealTimeElements = () => {
+    const dayOfWeekElement = document.querySelector('[data-testid="currentDayOfTheWeek"]');
+    const utcTimeElement = document.querySelector('[data-testid="currentUTCTime"]');
 
-    // Function to update the day of the week
-    function updateDayOfWeek() {
-        const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-        const today = new Date();
-        const dayIndex = today.getDay();
-        document.getElementById("dayOfWeek").textContent = daysOfWeek[dayIndex];
-    }
+    const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    const now = new Date();
+    
+    dayOfWeekElement.textContent = daysOfWeek[now.getUTCDay()];
+    utcTimeElement.textContent = now.toISOString().substr(11, 8) + " UTC";
+};
 
-    // Function to update the UTC time
-    function updateUTCTime() {
-        const now = new Date();
-        document.getElementById("utcTime").textContent = now.toUTCString();
-    }
+// Update real-time elements every second
+setInterval(updateRealTimeElements, 1000);
 
-    // Call the functions initially
-    updateDayOfWeek();
-    updateUTCTime();
-
-    // Update data button click event
-    updateButton.addEventListener("click", function () {
-        // Simulate updating data
-        nameElement.textContent = "Name: Jane Doe";
-        ageElement.textContent = "Age: 25";
-        locationElement.textContent = "Location: Los Angeles";
-    });
-});
